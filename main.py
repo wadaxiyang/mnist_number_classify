@@ -53,6 +53,8 @@ def softmax(x):
     e = np.exp(x - a)
     return e / e.sum(axis=1, keepdims=True)
 
+
+
 def train_CNN(Xt, yt, n_train, rng, lr: float=0.1, epochs: int=8, batch: int=64):
     model = CNN()
     for e in range(epochs):
